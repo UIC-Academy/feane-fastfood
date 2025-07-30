@@ -57,7 +57,7 @@ class Feedback(BaseModel):
     stars = models.PositiveIntegerField(validators=[MinValueValidator(1), MaxValueValidator(5)])
 
     def __str__(self):
-        return f"Feedback(name={self.name})"
+        return f"Feedback(message={self.message[:10]})"
     
     class Meta:
         verbose_name = "Feedback"

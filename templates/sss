@@ -1,0 +1,28 @@
+<div class="filters-content">
+        <div class="row grid">
+          {% for food in foods %}
+          <div class="col-sm-6 col-lg-4 all pizza">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="{{food.image.url}}" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    {{food.name}}
+                  </h5>
+                  <p>
+                    {{food.description}}
+                  </p>
+                  <div class="options">
+                    <h6>
+                      ${{food.price}}
+                    </h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
